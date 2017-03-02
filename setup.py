@@ -24,11 +24,11 @@ test_requirements = [
 
 setup(
     name='littleauth',
-    version='0.1.0',
+    version='0.2.0',
     description="Custom User model with uuid as primary key, and email as username.",
     long_description=readme + '\n\n' + history,
     author="Aldiantoro Nugroho",
-    author_email='kriwli@gmail.com',
+    author_email='kriwil@gmail.com',
     url='https://github.com/kriwil/django-littleauth',
     packages=[
         'littleauth',

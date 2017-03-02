@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
 __author__ = 'Aldiantoro Nugroho'
-__email__ = 'kriwli@gmail.com'
-__version__ = '0.1.0'
+__email__ = 'kriwil@gmail.com'
+__version__ = '0.2.0'

@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Aldiantoro Nugroho <kriwli@gmail.com>
+* Aldiantoro Nugroho <kriwil@gmail.com>
 
 Contributors
 ------------
