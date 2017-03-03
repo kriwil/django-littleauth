@@ -1,17 +1,20 @@
+# -*- coding: utf-8 -*-
+
 from django.contrib.auth import get_user_model
+from django.contrib.auth.backends import ModelBackend
 
 
-class NoPasswordBackend(object):
-    def authenticate(self, email):
+class LoginOrRegisterBackend(ModelBackend):
+    def authenticate(self, username=None, password=None, **kwargs):
+        UserModel = get_user_model()
+        if username is None:
+            username = kwargs.get(UserModel.USERNAME_FIELD)
         try:
-            user = get_user_model().objects.get(email=email)
-        except User.DoesNotExist:
-            return None
-        return user
-
-    def get_user(self, user_id):
-        try:
-            return get_user_model().objects.get(pk=user_id)
-        except get_user_model().DoesNotExist:
-            return None
-
+            user = UserModel._default_manager.get_by_natural_key(username)
+        except UserModel.DoesNotExist:
+            # Run the default password hasher once to reduce the timing
+            # difference between an existing and a non-existing user (#20760).
+            return UserModel.objects.create_user(email=username, password=password)
+        else:
+            if user.check_password(password) and self.user_can_authenticate(user):
+                return user
