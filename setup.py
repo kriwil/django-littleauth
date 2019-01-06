@@ -8,10 +8,10 @@ except ImportError:
     from distutils.core import setup
 
 
-with open('README.rst') as readme_file:
+with open("README.rst") as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
+with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
 requirements = [
@@ -23,30 +23,27 @@ test_requirements = [
 ]
 
 setup(
-    name='littleauth',
-    version='0.3.4',
+    name="littleauth",
+    version="0.3.4",
     description="Custom User model with uuid as primary key, and email as username.",
-    long_description=readme + '\n\n' + history,
+    long_description=readme + "\n\n" + history,
     author="Aldiantoro Nugroho",
-    author_email='kriwil@gmail.com',
-    url='https://github.com/kriwil/django-littleauth',
-    packages=[
-        'littleauth',
-    ],
-    package_dir={'littleauth':
-                 'littleauth'},
+    author_email="kriwil@gmail.com",
+    url="https://github.com/kriwil/django-littleauth",
+    packages=["littleauth"],
+    package_dir={"littleauth": "littleauth"},
     include_package_data=True,
     install_requires=requirements,
     license="ISCL",
     zip_safe=False,
-    keywords='littleauth',
+    keywords="littleauth",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: ISC License (ISCL)',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 3.5',
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: ISC License (ISCL)",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3.5",
     ],
-    test_suite='tests',
-    tests_require=test_requirements
+    test_suite="tests",
+    tests_require=test_requirements,
 )
