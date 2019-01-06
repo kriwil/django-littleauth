@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='littleauth',
-    version='0.3.2',
+    version='0.3.3',
     description="Custom User model with uuid as primary key, and email as username.",
     long_description=readme + '\n\n' + history,
     author="Aldiantoro Nugroho",
