@@ -18,6 +18,13 @@ Custom User model with uuid as primary key, and email as username.
 * Free software: ISC license
 * Documentation: https://littleauth.readthedocs.org.
 
+Pipenv
+--------
+
+For pipenv user, you can install this by running below command. *Replace 0.3.5 to the version you want to install*
+
+``pipenv install -e git+https://github.com/kriwil/django-littleauth.git@0.3.5#egg=django-littleauth``
+
 Features
 --------
 
